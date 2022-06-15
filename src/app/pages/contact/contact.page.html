@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xl="6" offset-xl="3">
+        <div class="ion-text-center">
+          <img src="/assets/images/support.svg" width="337px" />
+        </div>
+        <ion-list>
+          <ion-card>
+            <ion-card-content>
+              <h2 style="color: var(--ion-color-primary); font-weight: bold; font-size: 20px;">Get in touch</h2>
+              <ion-list>
+                <ion-item lines="none">
+                  <ion-icon name="call" color="primary" slot="start"></ion-icon>
+                  <ion-label>{{data?.support_mobile}}</ion-label>
+                </ion-item>
+                <ion-item lines="none">
+                  <ion-icon name="mail" color="primary" slot="start"></ion-icon>
+                  <ion-label>{{data?.support_email}}</ion-label>
+                </ion-item>
+                <ion-item lines="none">
+                  <ion-icon name="location" color="primary" slot="start"></ion-icon>
+                  <ion-label>{{data?.address}}</ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+          <ion-card button>
+            <ion-card-content>
+              <ion-item lines="none" (click)="onClick()">
+                <ion-icon name="map" color="primary" slot="start"></ion-icon>
+                <ion-label color="primary" style="font-size: 20px; font-weight: bold;">Navigate</ion-label>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

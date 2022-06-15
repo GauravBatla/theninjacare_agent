@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-buttons slot="start">
+      <ion-menu-button menu="m1">
+        <img src="assets/icon/menu.svg" />
+      </ion-menu-button>
+    </ion-buttons> -->
+    <ion-title>
+      Wallet
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onExtra($event)">
+        <ion-icon slot="icon-only" name="ellipsis-horizontal-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> 
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xl="6" offset-xl="3">
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <ion-row>
+                <img src="https://cdn2.iconfinder.com/data/icons/fintech-butterscotch-vol-2/512/Management-512.png"
+                  width="55%" />
+              </ion-row>
+              <ion-row>
+                <h2 style="padding: 7px;">{{'name'}}</h2>
+              </ion-row>
+            </ion-col>
+            <ion-col class="ion-align-self-center">
+              <div class="logo">
+                <ion-icon name="person-circle-outline" color="blue"></ion-icon>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="ion-padding-start">
+              <ion-label>Available Balance</ion-label>
+              <h2>{{500}}</h2>
+            </ion-col>
+            <ion-col class="ion-align-self-center">
+              <ion-button fill="clear" color="orange" (click)="onAdd()">
+                Add Amount
+                <ion-icon slot="end" name="add-circle-outline" color="orange"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-xl="6" offset-xl="3">
+        <ion-list>
+          <ion-item *ngFor="let transaction of transactionList">
+            <ion-label class="label">
+              {{transaction.trans_remarks}}
+              <p class="type">{{transaction.trans_type}}</p>
+              <p class="type">₹ {{transaction.trans_amount | number: '1.2'}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

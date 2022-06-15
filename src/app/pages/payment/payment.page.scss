@@ -1,0 +1,16 @@
+ion-card {
+  box-shadow: none;
+  margin: 4% 1%;
+  background: var(--ion-color-tertiary);
+  border-radius: 20px;
+
+  ion-card-content {
+    padding: 4%;
+    align-items: center;
+    display: flex;
+    img {
+        width: 33vw;
+        padding-right: 5%;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+
+<ion-header class="ion-no-border">
+  <ion-toolbar class="toolbar-css">
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/oppertunities" color="secondary"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="secondary">Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile-bg">
+  <!-- <div>
+    <ion-button fill="clear">
+      <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-title>Profile</ion-title>
+  </div> -->
+  <ion-grid>
+    <div class="profile-edit">
+      <ion-row>
+        <ion-col size-xl="6" offset-xl="3">
+          <ion-row>
+            <ion-col size="12">
+              <div class="avtar-icon" (click)="takePicture()">
+                <img src="/assets/avtar-icon.png" width="45px" *ngIf="imageUrl == null" /> 
+                <img [src]="imageUrl" width="149px" height="149px" *ngIf="imageUrl != null"/>
+              </div>
+            </ion-col>
+
+            
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </div>
+    <form [formGroup]="editProfile" (ngSubmit)="update()">
+    <div class="profile-service ion-margin-bottom">
+      <!-- <p>Interested Service</p>
+      <ion-row style="width: 100%;" class="profile-pg">
+
+        <ion-col size="6" *ngFor="let i of [1,2,3,4]" class="ion-no-padding">
+          <ion-button color="light" class="btn-order btn-profile" expand="block" shape="round">Floor Cleaning
+          </ion-button>
+        </ion-col>
+
+      </ion-row> -->
+      <!-- <ion-row class="profile-pg">
+        <ion-col size="6">
+          <div class="box-btn">
+            <p>Available on week off </p>
+            <ion-button expand="block" shape="round" color="secondary">Yes</ion-button>
+          </div>
+        </ion-col>
+
+        <ion-col size="6">
+          <div class="box-btn">
+            <p>Leave Request</p>
+            <ion-button expand="block" shape="round" color="secondary" (click)="onLeaveReq()">Leave Request</ion-button>
+          </div>
+        </ion-col>
+      </ion-row> -->
+
+      <ion-list class="profile-pg" style="background: transparent;">
+        <p class="work-p">Name</p>
+        <ion-item lines="none" class="locate-it input">
+          <!-- <ion-icon name="Location" slot="start" color="secondary"></ion-icon> -->
+          <ion-input type="text" formControlName="name" placeholder="Name"></ion-input>
+        </ion-item>
+        <p class="work-p">Contact</p>
+        <ion-item lines="none" class="locate-it input">
+          <ion-icon name="call" slot="start" color="secondary"></ion-icon>
+          <ion-input type="tel" formControlName="mobile" placeholder="Contact no."> </ion-input>
+
+        </ion-item>
+        <p class="work-p">Address</p>
+        <ion-item lines="none" class="locate-it input">
+          <ion-icon name="Location" slot="start" color="secondary"></ion-icon>
+          <ion-input type='text' formControlName="address" placeholder="Address">  </ion-input>
+        </ion-item>   
+      </ion-list>
+      
+    </div>
+    <ion-button expand="block" style="margin-top: 12px;" class="ion-margin-top" type="submit" shape="round" color="secondary">
+      <ion-icon name="create-outline" slot="start"></ion-icon> Edit Profile
+    </ion-button>
+  </form>
+  </ion-grid>
+</ion-content>

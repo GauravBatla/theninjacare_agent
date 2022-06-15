@@ -1,0 +1,155 @@
+// .profile-s p {
+//     font-size: 32px;
+//     color: #4A4956;
+//     margin-bottom: 16px;
+//     font-weight: 500;
+// }
+// .profile-bg{
+//     --background: transparent linear-gradient(180deg, #F8FCFF 0%, #E1F2FE 100%) 0% 0% no-repeat padding-box;;
+// }
+// .avtar-icon {
+//     background: #ffffff;
+//     border-radius: 50%;
+//     padding: 8px;
+//     height: 165px;
+//     width: 165px;
+//     box-shadow: 0px 6px 10px #0000001a;
+//     text-align: center;
+// }
+// .avtar-icon img {
+//     margin: 40px auto;
+// }
+// .profile-s {
+//     text-align: left;
+// }
+// .btn-profile{
+//     border-radius: 50px!important;
+//     font-size: 12px;
+//     text-transform: capitalize;
+//     --color: #616161;
+//     --background: #F2F9FE;
+//   }
+//   .profile-service {
+//     background: #DCEDF9 0% 0% no-repeat;
+//     padding: 20px;
+//     border-radius: 20px;
+//     margin-top: 30px;
+// }
+// .profile-service p {
+//     font-size: 20px;
+//     font-weight: 600;
+//     color: #0c3469;
+// }
+// .box-btn p {
+//     font-size: 15px;
+//     font-weight: 600;
+//     color: #0c3469;
+// }
+// .profile-box {
+//     border-radius: 22px;
+//     width: 100%;
+//     height: 35%;
+//     background: #F2F9FE;
+//     text-align: center;
+//     padding: 10%;
+//     }
+
+
+//     .bar-header {
+//         border: 0px !important;
+//         border-bottom-color: transparent !important;
+//         --background: linear-gradient(180deg, #F8FCFF 0%, #E1F2FE 100%) 0% 0% !important;
+//         border-bottom: none !important;
+//     }
+//     .profile-edit {
+//         padding: 30px 0px;
+//     }
+//     .profile-pg {
+//         padding: 10px 0px;
+//     }
+
+
+
+.profile-s p {
+    font-size: 32px;
+    color: #4A4956;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+.profile-bg{
+    --background: transparent linear-gradient(180deg, #F8FCFF 0%, #E1F2FE 100%) 0% 0% no-repeat padding-box;;
+}
+.avtar-icon {
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 8px;
+    height: 165px;
+    text-align: center;
+    width: 165px;
+    box-shadow: 0px 6px 10px #0000001a;
+}
+.avtar-icon img {
+    margin: 40px auto;
+}
+
+.profile-s {
+    text-align: left;
+}
+.btn-profile{
+    border-radius: 50px!important;
+    font-size: 12px;
+    text-transform: capitalize;
+    --color: #616161;
+    --background: #F2F9FE;
+  }
+
+
+    .bar-header {
+        border: 0px !important;
+        border-bottom-color: transparent !important;
+        --background: linear-gradient(180deg, #F8FCFF 0%, #E1F2FE 100%) 0% 0% !important;
+        border-bottom: none !important;
+    }
+    .profile-edit {
+        padding: 46px 0px;
+   
+    }
+    .profile-pg {
+        padding: 10px 0px;
+    }
+    .avtar-t{
+        text-align: center;
+        border-bottom: 1px solid #949393;
+        padding-bottom: 22px;
+    }
+    .avtar-t img {
+        background: #ffffff;
+    border-radius: 50%;
+    padding: 50px;
+    height: 160px;
+    width: 160px;
+    box-shadow: 0px 6px 10px #0000001a;
+    }
+    .avtar-t p {
+        font-size: 34px;
+        color: #4A4956;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    .avtar-t span {
+        font-weight: 700;
+        color: #4A4956;
+        font-size: 20px;
+        font-style: oblique;
+    }
+    .profile-list-item {
+        margin-top: 30px;
+    }
+
+.list-profile {
+    background: transparent;
+    ion-item {
+        --background: transparent;
+        margin-bottom: 5%;
+    }
+}

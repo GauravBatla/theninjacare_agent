@@ -1,0 +1,86 @@
+<ion-content>
+  <div class="div-flex">
+    <ion-item lines="none" style="--padding-start: 8px;">
+      <ion-label color="primary">
+        Welcome
+        <p style="color: var(--ion-color-primary); font-size: 22px; font-weight: bold;">{{name}}</p>
+      </ion-label>
+    </ion-item>
+    <ion-card class="person-card-css" button routerLink="/profile">
+      <ion-card-content>
+        <img src="/assets/images/person.svg" style="aspect-ratio: 1/1;" />
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xl="6" offset-xl="3">
+        <ion-item lines="none" style="--padding-start: 8px;" class="ion-margin-bottom">
+          <ion-label color="primary">
+            We have <strong>Awesome</strong>
+            <p style="color: var(--ion-color-primary); font-size: 22px; font-weight: bold;">Opportunities</p>
+          </ion-label>
+        </ion-item>
+        <ion-segment (ionChange)="segmentChanged($event)" mode="md" [value]="selectedSegment">
+          <ion-segment-button value="new">
+            <ion-label [color]="selectedSegment == 'new' ? 'secondary' : 'primary'">New Requirement</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="completed">
+            <ion-label [color]="selectedSegment == 'completed' ? 'secondary' : 'primary'">Completed</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        <ion-list style="background: transparent !important;"
+          *ngIf="selectedSegment == 'new' && requirementList.length">
+          <ion-card *ngFor="let req of requirementList" class="list-card-css">
+            <ion-card-content>
+              <div class="card-div-flex">
+                <h1 style="font-weight: bold; color: var(--ion-color-primary); font-size: 32px;">Greeting</h1>
+                <p style="font-size: 10px;">Date: {{req.created_at | date: 'dd-MM-YYYY hh:mm aa'}}</p>
+              </div>
+              <ion-label color="primary" class="ion-margin-bottom"><strong>Hiring for these opportunities</strong>
+              </ion-label>
+              <p>{{req.descreption}}</p>
+              <ion-row>
+                <ion-col size="12" class="ion-no-padding">
+                  <ion-button expand="block" color="light" shape="round" size="small">
+                    {{req.category.name}}
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+              <ion-button expand="block" color="primary-secondary" shape="round">Refer this job</ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+        <ion-list style="background: transparent !important;"
+          *ngIf="selectedSegment == 'completed' && completedList.length">
+          <ion-card *ngFor="let req of completedList" class="list-card-css">
+            <ion-card-content>
+              <div class="card-div-flex">
+                <h1 style="font-weight: bold; color: var(--ion-color-primary); font-size: 32px;">Greeting</h1>
+                <p style="font-size: 10px;">Date: {{req.created_at | date: 'dd-MM-YYYY hh:mm aa'}}</p>
+              </div>
+              <ion-label color="primary" class="ion-margin-bottom"><strong>Hiring for these opportunities</strong>
+              </ion-label>
+              <p>{{req.descreption}}</p>
+              <ion-row>
+                <ion-col size="12" class="ion-no-padding">
+                  <ion-button expand="block" color="light" shape="round" size="small">
+                    {{req.category.name}}
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+              <ion-button expand="block" color="primary-secondary" shape="round">Refer this job</ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+        <div
+          *ngIf="(selectedSegment == 'new' && !requirementList.length) || (selectedSegment == 'completed' && !completedList.length)">
+          <div class="empty-booking">
+            <ion-icon name="calendar-clear"></ion-icon>
+            <p>You dont have any bookings here!</p>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

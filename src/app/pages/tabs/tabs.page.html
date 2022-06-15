@@ -1,0 +1,26 @@
+<ion-tabs #tabs (ionTabsDidChange)="setCurrentTab()">
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="payment">
+      <div>
+        <ion-icon name="wallet"></ion-icon>
+        <ion-label>Payment</ion-label>
+      </div>
+    </ion-tab-button>
+
+    <ion-tab-button tab="home">
+      <div>
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Home</ion-label>
+      </div>
+    </ion-tab-button>
+
+    <ion-tab-button tab="contact">
+      <div>
+        <ion-icon name="call"></ion-icon>
+        <ion-label>Contact</ion-label>
+      </div>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

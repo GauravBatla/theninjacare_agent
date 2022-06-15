@@ -1,0 +1,6 @@
+{
+	"appId": "com.theninjacare.agent",
+	"appName": "theNinjaCare_Agent",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

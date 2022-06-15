@@ -1,0 +1,7 @@
+{
+  "name": "theNinjaCare_Agent",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

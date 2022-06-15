@@ -1,0 +1,62 @@
+ <ion-content>
+  <div class="top-header">
+    <div *ngIf="!otpdiv">
+      <div class="logo">
+        <img src="/assets/images/login-image.svg" class="centerIMG" />
+      </div>
+      <p style="font-size: 25px;" class="para-text ion-text-center">Sign In <span>with mobile no.</span></p>
+      <ion-label class="ion-padding-left">Mobile No.</ion-label>
+      <ion-item class="input ion-margin-vertical" lines="none">
+        <ion-icon name="phone-portrait-outline" slot="start" color="primary"></ion-icon>
+        <ion-input type="tel" placeholder="Enter your mobile no." minlength="10" maxlength="10" [(ngModel)]="mobile" (ionChange)="blurMobile($event)"></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col class="ion-margin-top ion-no-padding">
+          <ion-button expand="block" [disabled]="!mobileCheck" shape="round" (click)="onNext()" color="primary-secondary">Next</ion-button>
+        </ion-col>
+      </ion-row>
+      <!-- <ion-row>
+        <ion-col class="ion-text-center ion-margin-top">
+          <p class="extra-text">Don't have an account? <span routerLink="/register"><u>Register Here</u></span></p>
+        </ion-col>
+      </ion-row> -->
+    </div>
+
+    <div *ngIf="otpdiv">
+      <div class="logo">
+        <img src="/assets/images/otp-image.svg" class="centerIMG" />
+      </div>
+      <h4 class="header-otp">We have sent an OTP to your Mobile</h4>
+      <h5 class="header-otp-label">Please check your entered mobile no.</h5>
+      <ion-row text-center>
+        <ion-col class="ion-text-center" style="font-size: 28px;">
+          <ion-input class="otp-input" #otp1 required maxLength="1" (keyup)="otpController($event,otp2,'')" [(ngModel)]="opt1" type="tel">
+          </ion-input>
+          <ion-input class="otp-input" #otp2 required maxLength="1" (keyup)="otpController($event,otp3,otp1)" [(ngModel)]="opt2" type="tel">
+          </ion-input>
+          <ion-input class="otp-input" #otp3 required maxLength="1" (keyup)="otpController($event,otp4,otp2)" [(ngModel)]="opt3" type="tel">
+          </ion-input>
+          <ion-input class="otp-input" #otp4  required maxLength="1" (keyup)="otpController($event,otp5,otp3)" [(ngModel)]="opt4" type="tel">
+          </ion-input>
+          <ion-input class="otp-input" #otp5  required maxLength="1" (keyup)="otpController($event,'',otp4)" style="display: none;" type="tel">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-button type="submit" expand="block" (click)="OTPVerify()" shape="round" color="primary-secondary">Verify</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center" (click)="onResendOTP()">
+          <p class="extra-text">Didn't Receive? <span>Resend OTP</span></p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center ion-margin-top">
+          <p class="extra-text">Back to <span (click)="otpdiv = false"><u>Login</u></span></p>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

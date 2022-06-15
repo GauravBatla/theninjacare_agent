@@ -1,0 +1,132 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+:root {
+  --ion-color-primary-secondary: #0C3469;
+  --ion-color-primary-secondary-rgb: 12,52,105;
+  --ion-color-primary-secondary-contrast: #FFAE5A;
+  --ion-color-primary-secondary-contrast-rgb: 255,255,255;
+  --ion-color-primary-secondary-shade: #0b2e5c;
+  --ion-color-primary-secondary-tint: #244878;
+}
+
+.ion-color-primary-secondary {
+  --ion-color-base: var(--ion-color-primary-secondary);
+  --ion-color-base-rgb: var(--ion-color-primary-secondary-rgb);
+  --ion-color-contrast: var(--ion-color-primary-secondary-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-primary-secondary-contrast-rgb);
+  --ion-color-shade: var(--ion-color-primary-secondary-shade);
+  --ion-color-tint: var(--ion-color-primary-secondary-tint);
+}
+
+ion-content {
+  --background: var(--ion-color-tertiary-tint);
+}
+
+.top-header {
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  width: 90%;
+  //   text-align: center;
+
+  h1 {
+    font-size: 27px;
+    font-weight: bold;
+  }
+  .para-text {
+    font-size: 29px;
+    font-weight: bold;
+    span {
+      font-weight: 200;
+    }
+  }
+}
+
+.input {
+  border: 1px solid var(--ion-color-tertiary-shade);
+  --background: var(--ion-color-light) !important;
+  border-radius: 35px;
+  --padding-start: 15px !important;
+  width: 100%;
+  --placeholder-color: #000;
+  color: #000 !important;
+
+  ion-label {
+    display: none !important;
+  }
+
+  ion-input {
+    --placeholder-color: #000 !important;
+    color: #000 !important;
+  }
+
+  ion-select {
+    min-width: 100%;
+    padding: unset;
+    --placeholder-color: #000 !important;
+    color: #000 !important;
+  }
+
+  ion-select::part(icon) {
+    width: 20px;
+    color: var(--ion-color-tertiary);
+    opacity: 1;
+  }
+
+  ion-textarea {
+    --placeholder-color: #000 !important;
+    color: #000 !important;
+  }
+}
+
+.input.ion-touched.ion-invalid {
+  border: 1px solid var(--ion-color-danger);
+}
+
+.input.ion-touched.ion-valid {
+  border: 1px solid var(--ion-color-tertiary);
+}
+
+.extra-text {
+  color: #7c7d7e;
+  span {
+    color: var(--ion-color-secondary) !important;
+    font-weight: bold;
+  }
+}
+
+.label-css {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--ion-color-primary);
+}
+
+.toolbar-css {
+  --background: #F8FCFF;
+}

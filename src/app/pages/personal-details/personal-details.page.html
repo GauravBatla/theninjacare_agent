@@ -1,0 +1,67 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>personalDetails</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-item lines="full">
+    <h3 style="color: var(--ion-color-primary);">Fill Personal Details</h3>
+  </ion-item>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xl="6" offset-xl="3">
+        <form [formGroup]="personalDetailForm" (ngSubmit)="submit()">
+          <ion-list>
+            <div class="image-box ion-margin-bottom" (click)="onProfileImage()">
+              <div *ngIf="!profile_base64">
+                <p>
+                  <ion-icon name="cloud-upload" color="primary" slot="start"></ion-icon>
+                </p>
+                Upload your Profile Image
+              </div>
+              <img [src]="profile_base64" *ngIf="profile_base64" />
+            </div>
+            <ion-item lines="none" class="input ion-margin-bottom">
+              <ion-label>Name</ion-label>
+              <ion-input type="text" formControlName="name" placeholder="Name"></ion-input>
+            </ion-item>
+            <ion-item lines="none" class="input ion-margin-bottom">
+              <ion-label>Mobile</ion-label>
+              <ion-input type="tel" formControlName="mobile" placeholder="Mobile" minlength="10" maxlength="10"></ion-input>
+            </ion-item>
+            <ion-item lines="none" class="input ion-margin-bottom">
+              <ion-label>Address</ion-label>
+              <ion-input type="text" formControlName="address" placeholder="Address"></ion-input>
+            </ion-item>
+            <ion-item lines="full" class="ion-margin-bottom">
+              <h3 style="color: var(--ion-color-primary);">Bank Details</h3>
+            </ion-item>
+            <ion-item lines="none" class="input ion-margin-bottom">
+              <ion-label>Account Holder Name</ion-label>
+              <ion-input type="text" formControlName="account_name" placeholder="Account Holder Name"></ion-input>
+            </ion-item>
+            <ion-item lines="none" class="input ion-margin-bottom">
+              <ion-label>Account Number</ion-label>
+              <ion-input type="tel" formControlName="account_number" placeholder="Account Number" maxlength="15"></ion-input>
+            </ion-item>
+            <ion-item lines="none" class="input ion-margin-bottom">
+              <ion-label>Bank Name</ion-label>
+              <ion-input type="text" formControlName="bank_name" placeholder="Bank Name"></ion-input>
+            </ion-item>
+            <ion-item lines="none" class="input ion-margin-bottom">
+              <ion-label>IFSC Code</ion-label>
+              <ion-input type="text" formControlName="ifsc_code" placeholder="IFSC Code" minlength="11" maxlength="11"></ion-input>
+            </ion-item>
+          </ion-list>
+          <ion-row>
+            <ion-col>
+              <ion-button expand="block" shape="round" type="submit" color="primary-secondary" [disabled]="!personalDetailForm.valid">Submit</ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

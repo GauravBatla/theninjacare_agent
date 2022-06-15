@@ -1,0 +1,53 @@
+<ion-content class="signup-bg">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <h2 class="login-heading">Signup with us</h2>
+          <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <ion-list>
+              <ion-item class="login-input" lines="none">
+                <div class="image-box ion-margin-bottom" (click)="takePicture()">
+                  <div *ngIf="!imageUrl">
+                    <p>
+                      <ion-icon name="cloud-upload" color="primary" slot="start"></ion-icon>
+                    </p>
+                    Upload Your Profile
+                  </div>
+                  <img [src]="imageUrl" *ngIf="imageUrl" height="200px" width="200px" />
+                </div>
+              </ion-item>
+              <ion-item class="login-input" lines="none">
+                <ion-input formControlName="name" placeholder="Name"></ion-input>
+              </ion-item>
+              <ion-item class="login-input" lines="none">
+                <ion-input formControlName="mobile" placeholder="Mobile number"></ion-input>
+              </ion-item>
+              <ion-item class="login-input" lines="none">
+                <ion-input formControlName="address" placeholder="Address"></ion-input>
+              </ion-item>
+              <h2>Bank Details</h2>
+              <hr>
+              <ion-item class="login-input" lines="none">
+                <ion-input formControlName="account_name" placeholder="Account Name"></ion-input>
+              </ion-item>
+              <ion-item class="login-input" lines="none">
+                <ion-input formControlName="account_number" placeholder="Account No."></ion-input>
+              </ion-item>
+              <ion-item class="login-input" lines="none">
+                <ion-input formControlName="bank_name" placeholder="Bank Name"></ion-input>
+              </ion-item>
+              <ion-item class="login-input" lines="none">
+                <ion-input formControlName="ifsc_code" placeholder="IFSC Code"></ion-input>
+              </ion-item>
+
+
+              <ion-button shape="round" type="submit" [disabled]="!registerForm.valid" color="primary" expand="block">
+                Sign up</ion-button>
+            </ion-list>
+          </form>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

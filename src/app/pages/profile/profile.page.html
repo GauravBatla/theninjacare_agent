@@ -1,0 +1,87 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="toolbar-css">
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/oppertunities" color="secondary"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="secondary">Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile-bg">
+  <!-- <div>
+    <ion-button fill="clear">
+      <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
+    </ion-button>
+    <ion-title>Profile</ion-title>
+  </div> -->
+  <ion-grid>
+    <div class="profile-edit">
+      <ion-row>
+        <ion-col size="12">
+          <div class="avtar-t">
+            <img src="/assets/avtar-icon.png" width="45px" />
+            <p>{{name}}</p>
+            <ion-button (click)="onEdit()" fill="clear" color="secondary">
+              Edit Profile
+            </ion-button>
+          </div>
+
+          <div class="profile-list-item">
+            <ion-list class="list-profile">
+              <ion-item lines="none">
+                <img src="/assets/terms.png" width="20px" />
+                <ion-label class="ion-padding-start">Terms & condition</ion-label>
+              </ion-item>
+              <ion-item lines="none">
+                <img src="/assets/privacy.png" width="20px" />
+                <ion-label class="ion-padding-start">Privacy policy</ion-label>
+              </ion-item>
+              <!-- <ion-item lines="none">
+              <img src="/assets/share.png" width="20px" />
+              <ion-label class="ion-padding-start">Share app</ion-label>
+            </ion-item> -->
+              <ion-item lines="none">
+                <img src="/assets/about.png" width="20px" />
+                <ion-label class="ion-padding-start">About App </ion-label>
+              </ion-item>
+              <ion-item lines="none" (click)="logOut()">
+                <img src="/assets/logout.png" width="20px" />
+                <ion-label class="ion-padding-start">Logout</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+        </ion-col>
+
+
+
+
+
+
+      </ion-row>
+    </div>
+
+
+  </ion-grid>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- fghvjbknml -->

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xl="6" offset-xl="3">
+        <div class="ion-text-center">
+          <img src="/assets/images/payment-status.png" width="337px" />
+        </div>
+        <h1>Available Balance {{bal | currency:'INR'}} </h1>
+        <ion-list>
+          <ion-card button>
+            <ion-card-content>
+              <img src="http://www.downloadclipart.net/large/payment-download-png-image.png" />
+              <h2 style="color: var(--ion-color-primary); font-size: 22px;">Payment Status</h2>
+            </ion-card-content>
+          </ion-card>
+          <ion-card button>
+            <ion-card-content>
+              <img src="http://www.downloadclipart.net/large/payment-download-png-image.png" />
+              <h2 style="color: var(--ion-color-primary); font-size: 22px;">Request for Payment</h2>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
